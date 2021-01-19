@@ -38,6 +38,11 @@ if(isProduction){
   mongoose.set('debug', true);
 }
 
+// *** Be sure to include models before routes so that our routes will be able to use our models.
+
+//Requiring User.js so it can be used throughout the application
+require('./models/User');
+
 app.use(require('./routes'));
 
 /// catch 404 and forward to error handler
