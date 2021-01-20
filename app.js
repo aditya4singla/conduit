@@ -42,6 +42,7 @@ if(isProduction){
 
 //Requiring User.js so it can be used throughout the application
 require('./models/User');
+require('./config/passport');
 
 app.use(require('./routes'));
 
